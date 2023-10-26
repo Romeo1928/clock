@@ -65,12 +65,12 @@ function App() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      const currentTime = new Date();
-      const hours = currentTime.getHours().toString().padStart(2, '0');
-      const minutes = currentTime.getMinutes().toString().padStart(2, '0');
-      const seconds = currentTime.getSeconds().toString().padStart(2, '0');
-      const timeString = `${hours}:${minutes}:${seconds}`;
-      setTime(timeString);
+      const dateObject  = new Date();
+      const hours = dateObject.getHours().toString().padStart(2, '0');
+      const minutes = dateObject.getMinutes().toString().padStart(2, '0');
+      const seconds = dateObject.getSeconds().toString().padStart(2, '0');
+      const currentTime  = `${hours}:${minutes}:${seconds}`;
+      setTime(currentTime );
       // console.log(time)
     }, 1000);
 
