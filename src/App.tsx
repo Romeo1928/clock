@@ -7,9 +7,9 @@ import {ClockControl} from "./components/ClockControl";
 
 export type ClockControlType = {
 	currentTime: {
-		hours: number;
-		minutes: number;
-		seconds: number;
+		hours: string;
+		minutes: string;
+		seconds: string;
 	};
 }
 
@@ -34,9 +34,9 @@ function App() {
 		const seconds = now.getSeconds();
 
 		return {
-			hours: hours,
-			minutes: minutes,
-			seconds: seconds,
+			hours: hours.toString().padStart(2, '0'),
+			minutes: minutes.toString().padStart(2, '0'),
+			seconds: seconds.toString().padStart(2, '0'),
 		};
 	}
 

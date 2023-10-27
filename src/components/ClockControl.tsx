@@ -7,16 +7,18 @@ import {ClockControlType} from "../App";
 export const ClockControl: FC <ClockControlType> = ({currentTime}) => {
 // style
 	const hourStyle = {
-		transform: `translateX(-50%) translateY(-100%) rotate(${(currentTime.hours % 12) * 30 + currentTime.minutes / 2}deg)`
-	}
+		transform: `translateX(-50%) translateY(-100%) rotate(${
+			(+currentTime.hours % 12) * 30 + +currentTime.minutes / 2
+		}deg)`,
+	};
 
 	const minuteStyle = {
-		transform: `translateX(-50%) translateY(-100%) rotate(${currentTime.minutes * 6}deg)`
-	}
+		transform: `translateX(-50%) translateY(-100%) rotate(${+currentTime.minutes * 6}deg)`,
+	};
 
 	const secondStyle = {
-		transform: `translateX(-50%) translateY(-100%) rotate(${currentTime.seconds * 6}deg)`
-	}
+		transform: `translateX(-50%) translateY(-100%) rotate(${+currentTime.seconds * 6}deg)`,
+	};
 
 	return (
 		<div className="clock">
