@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 
 // часы формата 22:22:22
-export const Time = () => {
+export const TimeUncontrol = () => {
 	const [time, setTime] = useState('');
 	// console.log(new Date())
 

@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 
 // стрелочные часы
-export const Clock = () => {
+export const ClockUncontrol = () => {
 	const [currentTime, setCurrentTime] = useState(getCurrentTime());
 
 	useEffect(() => {
